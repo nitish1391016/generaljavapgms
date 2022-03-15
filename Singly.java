@@ -123,8 +123,8 @@ public class Singly {
 	}
 	public boolean isEmpty()	{
 		if(start==null)
-			return false;
-		return true;
+			return true;
+		return false;
 	}
 //	public static void main(String[] args) throws Exception {
 //		try (Scanner sc = new Scanner(System.in)) {
