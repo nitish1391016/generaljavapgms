@@ -6,17 +6,18 @@ import java.util.Scanner;
 
 public class SubSequence {
 	public static void printSubSequence(int ind ,int sum,int[] arr,List<Integer> list,int k)	{
-		if(ind==arr.length) {
+		if(ind==arr.length) {//traverse till last index
 			if(sum%k==0 && list.size()!=0)
 				System.out.println(list);
 			return;
 		}
 		sum+=arr[ind];
 		list.add(arr[ind]);
-		printSubSequence(ind+1,sum,arr,list,k);
+		printSubSequence(ind+1,sum,arr,list,k);//take element
+		
 		sum-=arr[ind];
 		list.remove(list.get(list.size()-1));
-		printSubSequence(ind+1,sum,arr,list,k);
+		printSubSequence(ind+1,sum,arr,list,k);	//not take case
 	}
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
